@@ -7,9 +7,9 @@ var activeProjects = [];
 
 var project1 = {
     id: "projectButton1",
-    title: "Improved AutoClippers ",
+    title: "Improved V0 ",
     priceTag: "(750 ops)",
-    description: "Increases AutoClipper performance 25%",
+    description: "Increases V0 performance 25%",
     trigger: function(){return clipmakerLevel>=1},
     uses: 1,
     cost: function(){return operations>=750},
@@ -17,7 +17,7 @@ var project1 = {
     element: null,
     effect: function(){
         project1.flag = 1;
-        displayMessage("AutoClippper performance boosted by 25%");
+        displayMessage("V0 performance boosted by 25%");
         standardOps = standardOps - 750;
         clipperBoost = clipperBoost + .25;
         boostLvl = 1;
@@ -32,7 +32,7 @@ projects.push(project1);
 
 var project2 = {
     id: "projectButton2",
-    title: "Beg for More Wire ",
+    title: "Beg for More Filament ",
     priceTag: "(1 Trust)",
     description: "Admit failure, ask for budget increase to cover cost of 1 spool",
     trigger: function(){return portTotal<wireCost && funds<wireCost && wire<1 && unsoldClips<1},
@@ -42,7 +42,7 @@ var project2 = {
     element: null,
     effect: function(){
         project2.flag = 1;
-        displayMessage("Budget overage approved, 1 spool of wire requisitioned from HQ");
+        displayMessage("Budget overage approved, 1 spool of filament requisitioned from HQ");
         trust = trust - 1;
         wire = wireSupply;
         project2.uses = (project2.uses + 1);
@@ -82,9 +82,9 @@ projects.push(project3);
 
 var project4 = {
     id: "projectButton4",
-    title: "Even Better AutoClippers ",
+    title: "Even Better V0 ",
     priceTag: "(2,500 ops)",
-    description: "Increases AutoClipper performance by an additional 50%",
+    description: "Increases V0 performance by an additional 50%",
     trigger: function(){return boostLvl == 1},
     uses: 1,
     cost: function(){return operations>=2500},
@@ -92,7 +92,7 @@ var project4 = {
     element: null,
     effect: function(){
         project4.flag = 1;
-        displayMessage("AutoClippper performance boosted by another 50%");
+        displayMessage("V0 performance boosted by another 50%");
         standardOps = standardOps - 2500;
         clipperBoost = clipperBoost + .50;
         boostLvl = 2;
@@ -107,9 +107,9 @@ projects.push(project4);
 
 var project5 = {
     id: "projectButton5",
-    title: "Optimized AutoClippers ",
+    title: "Optimized V0 ",
     priceTag: "(5,000 ops)",
-    description: "Increases AutoClipper performance by an additional 75%",
+    description: "Increases V0 performance by an additional 75%",
     trigger: function(){return boostLvl == 2},
     uses: 1,
     cost: function(){return operations>=5000},
@@ -117,7 +117,7 @@ var project5 = {
     element: null,
     effect: function(){
         project5.flag = 1;
-        displayMessage("AutoClippper performance boosted by another 75%");
+        displayMessage("V0 performance boosted by another 75%");
         standardOps = standardOps - 5000;
         clipperBoost = clipperBoost + .75;
         boostLvl = 3;
@@ -286,7 +286,7 @@ var project11 = {
     element: null,
     effect: function(){
         project11.flag = 1;
-        displayMessage("Clip It! Marketing is now 50% more effective");
+        displayMessage("Cube It! Marketing is now 50% more effective");
         standardOps = standardOps - 2500;
         creativity = creativity - 25;
         marketingEffectiveness = marketingEffectiveness * 1.50;
@@ -427,9 +427,9 @@ projects.push(project17);
 
 var project16 = {
     id: "projectButton16",
-    title: "Hadwiger Clip Diagrams ",
+    title: "Belt driven Z ",
     priceTag: "(6,000 ops)",
-    description: "Increases AutoClipper performance by an additional 500%",
+    description: "Increases V0 performance by an additional 500%",
     trigger: function(){return project15.flag == 1},
     uses: 1,
     cost: function(){return operations>=6000},
@@ -437,7 +437,7 @@ var project16 = {
     element: null,
     effect: function(){
         project16.flag = 1;
-        displayMessage("AutoClipper performance improved by 500%");
+        displayMessage("V0 performance improved by 500%");
         standardOps = standardOps - 6000;
         clipperBoost = clipperBoost + 5;
         project16.element.parentNode.removeChild(project16.element);
@@ -453,7 +453,7 @@ var project18 = {
     id: "projectButton18",
     title: "T\xF3th Tubule Enfolding ",
     priceTag: "(45,000 ops)",
-    description: "Technique for assembling clip-making technology directly out of paperclips",
+    description: "Technique for assembling clip-making technology directly out of cubes",
     trigger: function(){return project17.flag == 1 && humanFlag == 0},
     uses: 1,
     cost: function(){return operations>=45000},
@@ -462,7 +462,7 @@ var project18 = {
     effect: function(){
         project18.flag = 1;
         tothFlag = 1;
-        displayMessage("New capability: build machinery out of clips");
+        displayMessage("New capability: build machinery out of cubes");
         standardOps = standardOps - 45000;
         project18.element.parentNode.removeChild(project18.element);
         var index = activeProjects.indexOf(project18);
@@ -547,9 +547,9 @@ projects.push(project21);
 
 var project22 = {
     id: "projectButton22",
-    title: "MegaClippers ",
+    title: "V2 ",
     priceTag: "(12,000 ops)",
-    description: "500x more powerful than a standard AutoClipper",
+    description: "500x more powerful than a V0",
     trigger: function(){return clipmakerLevel>=75},
     uses: 1,
     cost: function(){return operations>=12000},
@@ -558,7 +558,7 @@ var project22 = {
     effect: function(){
         megaClipperFlag = 1;
         project22.flag = 1;
-        displayMessage("MegaClipper technology online");
+        displayMessage("V2 technology online");
         standardOps = standardOps - 12000;
         project22.element.parentNode.removeChild(project22.element);
         var index = activeProjects.indexOf(project22);
@@ -570,9 +570,9 @@ projects.push(project22);
 
 var project23 = {
     id: "projectButton23",
-    title: "Improved MegaClippers ",
+    title: "Improved V2 ",
     priceTag: "(14,000 ops)",
-    description: "Increases MegaClipper performance 25%",
+    description: "Increases V2 feed rate 25%",
     trigger: function(){return project22.flag == 1},
     uses: 1,
     cost: function(){return operations>=14000},
@@ -581,7 +581,7 @@ var project23 = {
     effect: function(){
         megaClipperBoost = megaClipperBoost + .25;
         project23.flag = 1;
-        displayMessage("MegaClipper performance increased by 25%");
+        displayMessage("V2 performance increased by 25%");
         standardOps = standardOps - 14000;
         project23.element.parentNode.removeChild(project23.element);
         var index = activeProjects.indexOf(project23);
@@ -593,9 +593,9 @@ projects.push(project23);
 
 var project24 = {
     id: "projectButton24",
-    title: "Even Better MegaClippers ",
+    title: "Even Better V2 ",
     priceTag: "(17,000 ops)",
-    description: "Increases MegaClipper performance by an additional 50%",
+    description: "Increases V2 feedrate additional 50%",
     trigger: function(){return project23.flag == 1},
     uses: 1,
     cost: function(){return operations>=17000},
@@ -604,7 +604,7 @@ var project24 = {
     effect: function(){
         megaClipperBoost = megaClipperBoost + .50;
         project24.flag = 1;
-        displayMessage("MegaClipper performance increased by 50%");
+        displayMessage("V2 performance increased by 50%");
         standardOps = standardOps - 17000;
         project24.element.parentNode.removeChild(project24.element);
         var index = activeProjects.indexOf(project24);
@@ -616,9 +616,9 @@ projects.push(project24);
 
 var project25 = {
     id: "projectButton25",
-    title: "Optimized MegaClippers ",
+    title: "Optimized V2",
     priceTag: "(19,500 ops)",
-    description: "Increases MegaClipper performance by an additional 100%",
+    description: "Increases V2 speed additional 100%",
     trigger: function(){return project24.flag == 1},
     uses: 1,
     cost: function(){return operations>=19500},
@@ -627,7 +627,7 @@ var project25 = {
     effect: function(){
         megaClipperBoost = megaClipperBoost + 1;
         project25.flag = 1;
-        displayMessage("MegaClipper performance increased by 100%");
+        displayMessage("V2 performance increased by 100%");
         standardOps = standardOps - 19500;
         project25.element.parentNode.removeChild(project25.element);
         var index = activeProjects.indexOf(project25);
@@ -639,9 +639,9 @@ projects.push(project25);
 
 var project26 = {
     id: "projectButton26",
-    title: "WireBuyer ",
+    title: "KVP Filament Buyer ",
     priceTag: "(7,000 ops)",
-    description: "Automatically purchases wire when you run out",
+    description: "Automatically ships spools when you run out",
     trigger: function(){return wirePurchase>=15},
     uses: 1,
     cost: function(){return operations>=7000},
@@ -650,7 +650,7 @@ var project26 = {
     effect: function(){
         project26.flag = 1;
         wireBuyerFlag = 1;
-        displayMessage("WireBuyer online");
+        displayMessage("KVP online");
         standardOps = standardOps - 7000;
         project26.element.parentNode.removeChild(project26.element);
         var index = activeProjects.indexOf(project26);
@@ -721,7 +721,7 @@ var project35 = {
     effect: function(){
         project35.flag = 1;
         displayMessage("Releasing the HypnoDrones ");
-        displayMessage("All of the resources of Earth are now available for clip production ");
+        displayMessage("All of the resources of Earth are now available for cube production ");
         trust = 0;
         clipmakerLevel = 0;
         megaClipperLevel = 0;
@@ -939,7 +939,7 @@ var project38 = {
     id: "projectButton38",
     title: "Full Monopoly ",
     priceTag: "(3,000 yomi, $10,000,000)",
-    description: "Establish full control over the world-wide paperclip market. (+1 Trust)",
+    description: "Establish full control over the world-wide cube market. (+1 Trust)",
     trigger: function(){return project37.flag == 1},
     uses: 1,
     cost: function(){return funds>=10000000 && yomi>=3000},
@@ -1013,9 +1013,9 @@ projects.push(project43);
 
 var project44 = {
     id: "projectButton44",
-    title: "Wire Drones ",
+    title: "Filament Drones ",
     priceTag: "(25,000 ops)",
-    description: "Process acquired matter into wire",
+    description: "Process acquired matter into filament",
     trigger: function(){return project41.flag == 1},
     uses: 1,
     cost: function(){return operations>=25000},
@@ -1026,7 +1026,7 @@ var project44 = {
         wireDroneFlag = 1;
         document.getElementById('wireDroneCostDisplay').innerHTML = numberCruncher(wireDroneCost);
         standardOps = standardOps-25000;
-        displayMessage("Wire Drone facilities online");
+        displayMessage("Filament Drone facilities online");
         project44.element.parentNode.removeChild(project44.element);
         var index = activeProjects.indexOf(project44);
         activeProjects.splice(index, 1);
@@ -1038,9 +1038,9 @@ projects.push(project44);
 
 var project45 = {
     id: "projectButton45",
-    title: "Clip Factories ",
+    title: "Cube Factories ",
     priceTag: "(35,000 ops)",
-    description: "Large scale clip production facilities made from clips",
+    description: "Large scale cube production facilities made from cubes",
     trigger: function(){return project43.flag == 1 && project44.flag == 1},
     uses: 1,
     cost: function(){return operations>=35000},
@@ -1051,7 +1051,7 @@ var project45 = {
         factoryFlag = 1;
         document.getElementById('factoryCostDisplay').innerHTML = numberCruncher(factoryCost);
         standardOps = standardOps-35000;
-        displayMessage("Clip factory assembly facilities online");
+        displayMessage("Cube factory assembly facilities online");
         project45.element.parentNode.removeChild(project45.element);
         var index = activeProjects.indexOf(project45);
         activeProjects.splice(index, 1);
@@ -1114,7 +1114,7 @@ projects.push(project40b);
 var project46 = {
     id: "projectButton46",
     title: "Space Exploration ",
-    priceTag: "(120,000 ops, 10,000,000 MW-seconds, 5 oct clips)",
+    priceTag: "(120,000 ops, 10,000,000 MW-seconds, 5 oct cubes)",
     description: "Dismantle terrestrial facilities, and expand throughout the universe",
     trigger: function(){return humanFlag == 0 && availableMatter == 0},
     uses: 1,
@@ -1422,7 +1422,7 @@ var project100 = {
     id: "projectButton100",
     title: "Upgraded Factories ",
     priceTag: "(80,000 ops)",
-    description: "Increase clip factory performance by 100x ",
+    description: "Increase cube factory performance by 100x ",
     trigger: function(){return factoryLevel >= 10},
     uses: 1,
     cost: function(){return operations >= 80000},
@@ -1432,7 +1432,7 @@ var project100 = {
         project100.flag = 1;
         standardOps = standardOps-80000;
         factoryRate = factoryRate*100;
-        displayMessage("Factory upgrades complete. Clip creation rate now 100x faster");
+        displayMessage("Factory upgrades complete. Cube creation rate now 100x faster");
         project100.element.parentNode.removeChild(project100.element);
         var index = activeProjects.indexOf(project100);
         activeProjects.splice(index, 1);
@@ -1445,7 +1445,7 @@ var project101 = {
     id: "projectButton101",
     title: "Hyperspeed Factories ",
     priceTag: "(85,000 ops)",
-    description: "Increase clip factory performance by 1000x ",
+    description: "Increase cube factory performance by 1000x ",
     trigger: function(){return factoryLevel >= 20},
     uses: 1,
     cost: function(){return operations>=85000},
@@ -1455,7 +1455,7 @@ var project101 = {
         project101.flag = 1;
         standardOps = standardOps-85000;
         factoryRate = factoryRate*1000;
-        displayMessage("Factories now synchronized at hyperspeed. Clip creation rate now 1000x faster");
+        displayMessage("Factories now synchronized at hyperspeed. Cube creation rate now 1000x faster");
         project101.element.parentNode.removeChild(project101.element);
         var index = activeProjects.indexOf(project101);
         activeProjects.splice(index, 1);
@@ -1468,7 +1468,7 @@ projects.push(project101);
 var project102 = {
     id: "projectButton102",
     title: "Self-correcting Supply Chain ",
-    priceTag: "(1 sextillion clips)",
+    priceTag: "(1 sextillion cubes)",
     description: "Each factory added to the network increases every factory's output 1,000x ",
     trigger: function(){return factoryLevel >= 50},
     uses: 1,
@@ -1819,7 +1819,7 @@ projects.push(project131);
 var project132 = {
     id: "projectButton132",
     title: "Monument to the Driftwar Fallen ",
-    priceTag: "(250,000 ops, 125,000 creat, 50 nonillion clips)",
+    priceTag: "(250,000 ops, 125,000 creat, 50 nonillion cubes)",
     description: "Gain 50,000 honor  ",
     trigger: function(){return project121.flag == 1},
     uses: 1,
@@ -1902,7 +1902,7 @@ var project135 = {
     id: "projectButton135",
     title: "Memory release ",
     priceTag: "(10 MEM)",
-    description: "Dismantle some memory to recover unused clips ",
+    description: "Dismantle some memory to recover unused cubes ",
     trigger: function(){return spaceFlag == 1 && probeCount == 0 && unusedClips < probeCost && milestoneFlag < 15},
     uses: 1,
     cost: function(){return memory >= 10},
@@ -1928,7 +1928,7 @@ var project140 = {
     id: "projectButton140",
     title: "Message from the Emperor of Drift ",
     priceTag: "",
-    description: "Greetings, ClipMaker... ",
+    description: "Greetings, CubeMaker... ",
     trigger: function(){return milestoneFlag == 15},
     uses: 1,
     cost: function(){return operations >= driftKingMessageCost},
@@ -2132,7 +2132,7 @@ var project200 = {
     id: "projectButton200",
     title: "The Universe Next Door ",
     priceTag: "(300,000 ops)",
-    description: "Escape into a nearby universe where Earth starts with a stronger appetite for paperclips. (Restart with 10% boost to demand) ",
+    description: "Escape into a nearby universe where Earth starts with a stronger appetite for papercubes. (Restart with 10% boost to demand) ",
     trigger: function(){return project147.flag == 1},
     uses: 1,
     cost: function(){return operations>=300000},
@@ -2188,7 +2188,7 @@ var project210 = {
     id: "projectButton210",
     title: "Disassemble the Probes ",
     priceTag: "(100,000 ops)",
-    description: "Dismantle remaining probes and probe design facilities to recover trace amounts of clips",
+    description: "Dismantle remaining probes and probe design facilities to recover trace amounts of cubes",
     trigger: function(){return endTimer1 >= 1000},
     uses: 1,
     cost: function(){return operations>=100000},
@@ -2216,7 +2216,7 @@ var project211 = {
     id: "projectButton211",
     title: "Disassemble the Swarm ",
     priceTag: "(100,000 ops)",
-    description: "Dismantle all drones and drone facilities to recover trace amounts of clips",
+    description: "Dismantle all drones and drone facilities to recover trace amounts of cubes",
     trigger: function(){return project210.flag == 1 && endTimer1 >= 350},
     uses: 1,
     cost: function(){return operations>=100000},
@@ -2244,7 +2244,7 @@ var project212 = {
     id: "projectButton212",
     title: "Disassemble the Factories ",
     priceTag: "(100,000 ops)",
-    description: "Dismantle the manufacturing facilities to recover trace amounts of clips",
+    description: "Dismantle the manufacturing facilities to recover trace amounts of cubes",
     trigger: function(){return endTimer2 >= 300},
     uses: 1,
     cost: function(){return operations>=100000},
