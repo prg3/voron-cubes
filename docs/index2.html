@@ -65,7 +65,7 @@
                 <span>&nbsp;.&nbsp;</span><span id="readout2"></span><br />
             </p>
             <p class = "console"> 
-                <span>&nbsp;>&nbsp;</span><span id="readout1">Welcome to Universal Paperclips</span><span id="cursor" class = "pulsate">|</span>
+                <span>&nbsp;>&nbsp;</span><span id="readout1">Welcome to Voron Cubes</span><span id="cursor" class = "pulsate">|</span>
             </p>
             
         </div> 
@@ -79,14 +79,14 @@
             </div>        
         <div class = "toolTip">
         <span id = "clipCountCrunched" class = "toolTipText">total clips produced</span>    
-        <h2>Paperclips: <span id="clips">0</span></h2>
+        <h2>Cubes: <span id="clips">0</span></h2>
         </div>
             
         </div>    
             
         <div id="leftColumn">
         
-        <button class = "button2" id ="btnMakePaperclip" onclick="clipClick(1)">Make Paperclip</button><br />
+        <button class = "button2" id ="btnMakePaperclip" onclick="clipClick(1)">Print Cube</button><br />
         <br />
         
         <div id = "creationDiv">
@@ -128,18 +128,18 @@
         </div>
             
         <div id="wireTransDiv">
-        Wire: <span id="transWire">0</span> <span id = "inchSpan">inches</span><br />
+        Filament: <span id="transWire">0</span> <span id = "inchSpan">mm</span><br />
         </div>      
             
         <div id = "factoryDivSpace">
-        Factories: <span id="factoryLevelDisplaySpace">0</span><br /><br />     
+        Printers: <span id="factoryLevelDisplaySpace">0</span><br /><br />     
         </div>    
             
         </div>   
             
         <div id="wireProductionDiv">
             
-        <b>Wire Production</b><br />
+        <b>Filament Production</b><br />
         <hr>  
         <div id = droneUpgradeDisplay>
         <p class = "clean">
@@ -151,8 +151,8 @@
         <div id="mdpsDiv">(<span id="mdps">0</span> g per sec)<br /></div>     
         Acquired Matter: <span id="acquiredMatterDisplay">0</span> g<br />
         (<span id="maps">0</span> g per sec)<br />        
-        Wire: <span id="nanoWire">0</span> inches<br />
-        (<span id="wpps">0</span> inches per sec) <br />    
+        Filament: <span id="nanoWire">0</span> mm<br />
+        (<span id="wpps">0</span> mm per sec) <br />    
         <br />
             
         <div id = "harvesterDiv">
@@ -182,14 +182,14 @@
         </div>    
         <br />    
             
-        Cost: <span id="harvesterCostDisplay">0</span> clips<br /><br />
+        Cost: <span id="harvesterCostDisplay">0</span> cubes<br /><br />
         
         </div> 
             
         <div id = "wireDroneDiv">
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeWireDrone"
-        onclick="makeWireDrone(1)">&nbsp &nbsp &nbsp Wire Drone &nbsp &nbsp</button> <span class = "engineText6" id="wireDroneLevelDisplay">0</span></p>
+        onclick="makeWireDrone(1)">&nbsp &nbsp &nbsp KVP Filament Drone &nbsp &nbsp</button> <span class = "engineText6" id="wireDroneLevelDisplay">0</span></p>
             
         <div id = "wireDroneMultiButtons">    
             
@@ -208,14 +208,14 @@
         </div>    
         <br />    
             
-        Cost: <span id="wireDroneCostDisplay">0</span> clips<br />
+        Cost: <span id="wireDroneCostDisplay">0</span> cubes<br />
         <br />
         </div>  
             
         <div id = "droneDivSpace">
             
         Harvester Drones: <span id = "harvesterLevelSpace">0</span><br />
-        Wire Drones: <span id = "wireDroneLevelSpace">0</span><br /><br /> 
+        KVP Filament Drones: <span id = "wireDroneLevelSpace">0</span><br /><br /> 
         
         </div>     
             
@@ -233,7 +233,7 @@
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeProbe"
         onclick="makeProbe()">Launch Probe</button><br />
-        Cost: <span id="probeCostDisplay">0</span> clips<br />
+        Cost: <span id="probeCostDisplay">0</span> cubes<br />
         <br />
         </div>   
         
@@ -268,7 +268,7 @@
         <div id="revPerSecDiv">  
            
         Avg. Rev. per sec: $ <span id="avgRev">0</span><br />
-        Avg. Clips Sold per sec: <span id="avgSales">0</span><br />    
+        Avg. Cubes Sold per sec: <span id="avgSales">0</span><br />    
             
         </div>  
         Unsold Inventory: <span id="unsoldClips">0</span><br /> 
@@ -277,7 +277,7 @@
         onclick="lowerPrice()">lower</button>
         <button class = "button2" id = "btnRaisePrice"
         onclick="raisePrice()">raise</button>
-        Price per Clip: $ <span id="margin">.25</span><br />
+        Price per Cube: $ <span id="margin">.25</span><br />
             
         Public Demand: <span id="demand">10</span>%<br />
         <br />    
@@ -295,24 +295,24 @@
         <b>Manufacturing</b><br />
         <hr>
         
-        Clips per Second: <span id="clipmakerRate">0</span><br />
+        Cubes per Second: <span id="clipmakerRate">0</span><br />
         <br /> 
             
         <div id = "wireBuyerDiv">
         <button class = "button2" id ="btnToggleWireBuyer"
-        onclick="toggleWireBuyer()">WireBuyer</button> <span class = "engineText6" id = "wireBuyerStatus">ON</span>    
+        onclick="toggleWireBuyer()">FilamentBuyer</button> <span class = "engineText6" id = "wireBuyerStatus">ON</span>    
         </div>
           
             
         <button class = "button2" id ="btnBuyWire"
-        onclick="buyWire()">Wire</button> <span class = "engineText6" id="wire">1000</span><span class = "engineText6"> inches</span><br /> 
+        onclick="buyWire()">Filament</button> <span class = "engineText6" id="wire">1000</span><span class = "engineText6"> mm</span><br /> 
         Cost: $ <span id="wireCost">20</span><br />
         <br />
             
         <div id = "autoClipperDiv">
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeClipper"
-        onclick="makeClipper()">AutoClippers</button> <span class = "engineText6" id="clipmakerLevel2">0</span></p>
+        onclick="makeClipper()">V0</button> <span class = "engineText6" id="clipmakerLevel2">0</span></p>
         Cost: $ <span id="clipperCost">5.00</span><br />
         <br />
         </div>    
@@ -320,7 +320,7 @@
         <div id = "megaClipperDiv">
         <p class = "engineText5">
         <button class = "button2" id = "btnMakeMegaClipper"
-        onclick="makeMegaClipper()">MegaClippers</button> <span class = "engineText6" id="megaClipperLevel">0</span></p>
+        onclick="makeMegaClipper()">V2</button> <span class = "engineText6" id="megaClipperLevel">0</span></p>
         Cost: $ <span id="megaClipperCost">500</span><br />
         </div>    
                   
@@ -372,7 +372,7 @@
             
         <div id="trustDiv">    
         Trust: <span id="trust">2</span><br />
-        +1 Trust at: <span id="nextTrust">1000</span> clips<br />    
+        +1 Trust at: <span id="nextTrust">1000</span> cubes<br />    
         <br />
         </div>
             
@@ -752,7 +752,7 @@
             
         </br> 
             
-        Cost: <span id="farmCost">0</span> clips<br />
+        Cost: <span id="farmCost">0</span> cubes<br />
         <br />
             
         Storage: <span id="storedPower">0</span> / <span id="maxStorage">0</span> MW-seconds<br />
@@ -779,7 +779,7 @@
         
         </br>     
             
-        Cost: <span id="batteryCost">0</span> clips<br />
+        Cost: <span id="batteryCost">0</span> cubes<br />
         <br />     
                       
         </div>               
@@ -834,7 +834,7 @@
             
         <div class = "toolTip2">     
          
-        <span class = "toolTipText2">Rate at which probes generate more probes (each new probe costs 100 quadrillion clips) </span>
+        <span class = "toolTipText2">Rate at which probes generate more probes (each new probe costs 100 quadrillion cubes) </span>
             
         Self-Replication: <span id="probeRepDisplay">0</span>
             
@@ -860,7 +860,7 @@
             
         <div class = "toolTip2">     
          
-        <span class = "toolTipText2">Rate at which probes build factories (each new factory costs 100 million clips)</span>
+        <span class = "toolTipText2">Rate at which probes build factories (each new factory costs 100 million cubes)</span>
             
         Factory Production: <span id="probeFacDisplay">0</span>
             
@@ -873,7 +873,7 @@
             
          <div class = "toolTip2">     
          
-        <span class = "toolTipText2">Rate at which probes spawn Harvester Drones (each new drone costs 2 million clips)</span>
+        <span class = "toolTipText2">Rate at which probes spawn Harvester Drones (each new drone costs 2 million cubes)</span>
             
         Harvester Drone Production: <span id="probeHarvDisplay">0</span>
              
@@ -886,9 +886,9 @@
             
         <div class = "toolTip2">     
          
-        <span class = "toolTipText2">Rate at which probes spawn Wire Drones (each new drone costs 2 million clips)</span>
+        <span class = "toolTipText2">Rate at which probes spawn KVP Filament Drones (each new drone costs 2 million cubes)</span>
             
-        Wire Drone Production: <span id="probeWireDisplay">0</span>
+        KVP Filament Drone Production: <span id="probeWireDisplay">0</span>
             
             </div>    <br />  
                
